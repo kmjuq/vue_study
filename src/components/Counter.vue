@@ -1,5 +1,6 @@
 <template>
     <span>Counter: {{ counter }}</span>
+    <br />
 </template>
 
 <script>
@@ -8,6 +9,11 @@ export default {
         return {
             counter: 0
         }
+    },
+    mounted() {
+        setInterval(() => {
+            this.counter++
+        }, 1000);
     }
 }
 </script>
